@@ -48,6 +48,7 @@ input[type="number"]{
     max-width: 3rem;
     background-color: var(--greenTxtShade);
     color: var(--fontColor);
+    outline: none;
 }
 
 div{
