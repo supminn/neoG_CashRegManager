@@ -10,16 +10,17 @@
 </head>
 
 <body>
+    <h1>Cash Register Manager</h1>
     <form>
         <div class="txt-bill"> Bill Amount: <input type="number" id="bill-amount" min="0" required
                 oninput="validity.valid||(value='');" /> </div>
         <div class="txt-cash">Cash Given: <input type="number" id="cash-amount" min="0" required
                 oninput="validity.valid||(value='');" /> </div>
-                <button id="btn-calculate" type="button">Return Change</button>
+        <br />
+        <button id="btn-calculate" type="button">Return Change</button>
         <button id="btn-reset" type="reset">Reset</button>
     </form>
-   
-
+    <br />
     <div id="cash-change"></div>
     <script type="text/javascript" src="script/app.js"></script>
 </body>

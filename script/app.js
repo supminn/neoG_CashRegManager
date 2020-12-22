@@ -42,10 +42,10 @@ function calculateChange() {
                 break;
             }
         }
-        cashChange.innerHTML = "<div>Return the change as follows </div>";
+        cashChange.innerHTML = "<div>Return the change as follows</div>";
         deno.map(deno => {
             if (notes[deno] > 0) {
-                cashChange.innerHTML += `<div><b class="amt-bold">${notes[deno]}</b> &nbsp of &nbsp <b class="amt-bold">₹${deno}</b></div>`;
+                cashChange.innerHTML += `<div><b class="amt-bold">${notes[deno]}</b>&nbsp notes &nbsp of &nbsp <b class="amt-bold">₹${deno}</b></div>`;
             }
         })
     }
