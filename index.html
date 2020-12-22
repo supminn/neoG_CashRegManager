@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/favicon.jpg" type="image/jpg" sizes="16x16">
+    <link rel="stylesheet" href="style/styles.css">
+    <title>Cash Manager</title>
+</head>
+
+<body>
+    <form>
+        <div class="txt-bill"> Bill Amount: <input type="number" id="bill-amount" min="0" required
+                oninput="validity.valid||(value='');" /> </div>
+        <div class="txt-cash">Cash Given: <input type="number" id="cash-amount" min="0" required
+                oninput="validity.valid||(value='');" /> </div>
+                <button id="btn-calculate" type="button">Return Change</button>
+        <button id="btn-reset" type="reset">Reset</button>
+    </form>
+   
+
+    <div id="cash-change"></div>
+    <script type="text/javascript" src="script/app.js"></script>
+</body>
+
+</html>
