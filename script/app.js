@@ -32,6 +32,7 @@ function calculateChange() {
             2000: 0,
         }
         var cashDiff = cashAmount.value - billAmount.value;
+        var changeVal = cashDiff;
         var deno = Object.keys(notes).reverse();
         for (var i = 0; i < deno.length; i++) {
             while (cashDiff >= deno[i]) {
@@ -42,7 +43,7 @@ function calculateChange() {
                 break;
             }
         }
-        cashChange.innerHTML = "<div>Return the change as follows</div>";
+        cashChange.innerHTML = `<div>Return the change of <b class="amt-bold">₹${changeVal}</b> as follows</div>`;
         deno.map(deno => {
             if (notes[deno] > 0) {
                 cashChange.innerHTML += `<div><b class="amt-bold">${notes[deno]}</b>&nbsp notes &nbsp of &nbsp <b class="amt-bold">₹${deno}</b></div>`;
