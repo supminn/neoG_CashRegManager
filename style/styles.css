@@ -11,8 +11,8 @@
 body {
     font-family: 'Lato', sans-serif;
     text-align: center;
-    background: linear-gradient(45deg,var(--greenShade),var(--blueShade),var(--greenShade));
-    height: 100vh;
+    background-image: url("/image/wave.svg"), linear-gradient(45deg,var(--greenShade),var(--blueShade),var(--greenShade));
+    background-size: cover;
 }
 
 .txt-cash {
