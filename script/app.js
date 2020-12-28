@@ -17,10 +17,14 @@ function displayCashHandler(data) {
 
 // Calculate the change with minimum number of notes
 function calculateChange() {
-    if (billAmount.value == cashAmount.value) {
-        cashChange.innerText = "No change to be returned"
+    console.log("bill: "+billAmount.value);
+    console.log("cash: "+cashAmount.value);
+    if(billAmount.value == "" || cashAmount.value == ""){
+        cashChange.innerText = "Invalid input, please try again.";
+    } else if (billAmount.value == cashAmount.value) {
+        cashChange.innerText = "No change to be returned";
     } else if (parseInt(billAmount.value) > parseInt(cashAmount.value)) {
-        cashChange.innerHTML = `User must pay an addition of <b class="amt-bold">₹${billAmount.value - cashAmount.value}</b>`;
+        cashChange.innerHTML = `Insufficient cash! User must pay an addition of <b class="amt-bold">₹${billAmount.value - cashAmount.value}</b>`;
     } else {
         var notes = {
             1: 0,
