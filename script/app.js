@@ -58,12 +58,12 @@ function calculateChange() {
         <tbody>
         <tr><td>test</td><td>testy</td></tr>`;
         deno.map(deno => {
-            cashChange.innerHTML += "<tr>";
             if (notes[deno] > 0) {
-                cashChange.innerHTML += `<td><b class="amt-bold">${notes[deno]}</b></td> 
-                <td><b class="amt-bold">₹${deno}</b></td>`;
+                cashChange.innerHTML += `<tr>
+                <td><b class="amt-bold">${notes[deno]}</b></td> 
+                <td><b class="amt-bold">₹${deno}</b></td>
+                </tr>`;
             }
-            cashChange.innerHTML += "</tr>";
         })
         cashChange.innerHTML += `</tbody>
         </table>`;
