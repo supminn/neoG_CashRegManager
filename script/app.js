@@ -47,12 +47,27 @@ function calculateChange() {
                 break;
             }
         }
-        cashChange.innerHTML = `<div>Return the change of <b class="amt-bold">₹${changeVal}</b> as follows</div>`;
+        let dataText =  `<div class="amt-bold">Return the change of <b class="amt-bold">₹${changeVal}</b> as follows</div><br/>
+        <table>
+        <thead>
+        <tr>
+        <th>Denomination</th>
+        <th>No. of Notes</th>
+        </tr>
+        </thead>
+        <tbody>`;
         deno.map(deno => {
             if (notes[deno] > 0) {
-                cashChange.innerHTML += `<div><b class="amt-bold">${notes[deno]}</b>&nbsp notes &nbsp of &nbsp <b class="amt-bold">₹${deno}</b></div>`;
+                dataText += `<tr>
+                <td>₹${deno}</td>
+                <td>${notes[deno]}</td> 
+                </tr>`;
             }
         })
+        dataText += `</tbody>
+        </table>`;
+        console.log(dataText);
+        cashChange.innerHTML = dataText;
     }
 }
 // Bill amount on change listener
