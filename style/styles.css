@@ -84,6 +84,7 @@ table {
     border: 2px solid var(--purpleShade);
     border-radius: 1rem 1rem 0 0;
     box-shadow: 0 0 20px rgba(68, 68, 221,0.4);
+    border-spacing: 0;
 }
 
 th {
