@@ -47,7 +47,7 @@ function calculateChange() {
                 break;
             }
         }
-        cashChange.innerHTML = `<div>Return the change of <b class="amt-bold">₹${changeVal}</b> as follows</div>
+        let dataText =  `<div class="amt-bold">Return the change of <b class="amt-bold">₹${changeVal}</b> as follows</div><br/>
         <table>
         <thead>
         <tr>
@@ -55,18 +55,19 @@ function calculateChange() {
         <th>No. of Notes</th>
         </tr>
         </thead>
-        <tbody>
-        <tr><td>test</td><td>testy</td></tr>`;
+        <tbody>`;
         deno.map(deno => {
             if (notes[deno] > 0) {
-                cashChange.innerHTML += `<tr>
-                <td><b class="amt-bold">${notes[deno]}</b></td> 
-                <td><b class="amt-bold">₹${deno}</b></td>
+                dataText += `<tr>
+                <td>₹${deno}</td>
+                <td>${notes[deno]}</td> 
                 </tr>`;
             }
         })
-        cashChange.innerHTML += `</tbody>
+        dataText += `</tbody>
         </table>`;
+        console.log(dataText);
+        cashChange.innerHTML = dataText;
     }
 }
 // Bill amount on change listener

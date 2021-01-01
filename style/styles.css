@@ -1,17 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,400;1,700&display=swap');
 
-:root{
+:root {
     --greenShade: #43d19d;
     --greenTxtShade: #30ca92;
-    --blueShade:#32b1db;
-    --purpleShade:#4444dd;
-    --fontColor:#0202a1;
+    --blueShade: #32b1db;
+    --purpleShade: #4444dd;
+    --fontColor: #0202a1;
     --white: white;
 }
+
 body {
     font-family: 'Lato', sans-serif;
     text-align: center;
-    background-image: url("/image/wave.svg"), linear-gradient(45deg,var(--greenShade),var(--blueShade),var(--greenShade));
+    background-image: url("/image/wave.svg"), linear-gradient(45deg, var(--greenShade), var(--blueShade), var(--greenShade));
     background-size: cover;
 }
 
@@ -20,29 +21,30 @@ body {
 }
 
 .amt-bold {
-    font-size: large;
+    font-size: larger;
 }
-h1{
-    background: linear-gradient(var(--fontColor),var(--purpleShade));
+
+h1 {
+    background: linear-gradient(var(--fontColor), var(--purpleShade));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(1.5rem -0.7rem 0.75rem var(--purpleShade));
 }
 
-form{
+form {
     padding: 1rem;
-    border:1px dashed var(--purpleShade);
+    border: 1px dashed var(--purpleShade);
     border-radius: 1rem;
     max-width: 400px;
     height: 200px;
     margin: auto;
-    box-shadow: 10px 10px 15px var(--greenTxtShade);
+    box-shadow: 10px 10px 15px var(--greenTxtShade), -10px -10px 15px var(--greenTxtShade);
 }
 
-input[type="number"]{
+input[type="number"] {
     padding: 0.5rem;
     margin: 0.5rem;
-    border:1px solid var(--purpleShade);
+    border: 1px solid var(--purpleShade);
     border-radius: 1rem;
     font-weight: bold;
     max-width: 3rem;
@@ -51,13 +53,13 @@ input[type="number"]{
     outline: none;
 }
 
-div{
+div {
     color: var(--fontColor);
     padding: 0.4rem;
     font-size: large;
 }
 
-button{
+button {
     font-size: 0.9rem;
     padding: 0.7rem;
     margin: 0 0.4rem;
@@ -67,29 +69,60 @@ button{
     background-color: var(--purpleShade);
     cursor: pointer;
 }
+
 button:hover {
-  box-shadow: 0 0.5em 0.5em -0.2em var(--greenShade);
-  transform: translateY(-0.25em);
+    box-shadow: 0 0.5em 0.5em -0.2em var(--greenShade);
+    transform: translateY(-0.25em);
 }
 
-#cash-change{
+#cash-change {
     height: 350px;
 }
 
-@media only screen and (max-width:270px){
-    form{
-        height: 250px;
-    }
-    button{
-        margin: 0.2rem 0.4rem;
-    }
+table {
+    margin: auto;
+    border: 2px solid var(--purpleShade);
+    border-radius: 1rem 1rem 0 0;
+    box-shadow: 0 0 20px rgba(68, 68, 221,0.4);
 }
 
-@media only screen and (max-width:240px){
-    form{
-        height: 300px;
+th {
+    padding: 0.7rem;
+    background-color: rgba(49, 49, 218, 0.7);
+    color: var(--white);
+}
+
+th:first-child{
+    border-top-left-radius: 1rem;
+}
+
+th:last-child{
+    border-top-right-radius: 1rem;
+}
+
+th:last-child, td:last-child {
+    border-left: 1px solid var(--purpleShade);
+}
+
+td {
+    border-top: 1px solid var(--purpleShade);
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: bold;
+}
+tr:nth-of-type(even) td{
+    background-color: rgba(50, 50, 182, 0.6);
+    color: var(--white);
+}
+@media only screen and (max-width:400px) {
+    form {
+        height: auto;
     }
-    button{
+
+    button {
         margin: 0.2rem 0.4rem;
+    }
+    .amt-bold {
+        font-size: large;
     }
 }
